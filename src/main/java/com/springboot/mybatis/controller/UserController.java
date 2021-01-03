@@ -20,7 +20,7 @@ public class UserController {
     @RequestMapping(value = "/select", method = RequestMethod.POST)
     @ResponseBody
     public List<Config_User_S> selectList(@RequestBody Config_User_S config_user_s) {
-        System.out.println(config_user_s.getAvatarUrl());
+        System.out.println(config_user_s.getIsActive());
         return userMapper.get(config_user_s);
     }
 
