@@ -20,7 +20,8 @@ public class UserController {
     @RequestMapping(value = "/select", method = RequestMethod.POST)
     @ResponseBody
     public List<Config_User_S> selectList(@RequestBody Config_User_S config_user_s) {
-        return null;
+        System.out.println("你好");
+        return userMapper.get(config_user_s);
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
